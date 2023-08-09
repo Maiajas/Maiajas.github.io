@@ -8,7 +8,8 @@
     <title>Temperature converter</title>    
     <link rel="manifest" href="/manifest.json" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/converter.css" />
+    <link rel="stylesheet" href="/css/converter.css" />    
+    <script src="/src/main.js"></script>
   </head>
   <body>
     <h1>Test Page</h1>
@@ -21,12 +22,6 @@
       <a href="#contact">Contact</a>
       <a href="#about">About</a>
     </div>
-    <script src="/src/main.js"></script>
-    <script>
-        if('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('/src/sw.js', { scope: '/' });
-        }
-    </script>
   </body>
-  <footer><p id="footer-text">test page. v0.1.1 &#169 Maiajas 2023.</p></footer>
+  <footer><p id="footer-text">test page. v0.2 &#169 Maiajas 2023.</p></footer>
 </html>
