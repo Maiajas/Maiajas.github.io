@@ -40,13 +40,18 @@ p {
   background: hsla(0, 1%, 19%, 0.3);
   overflow: hidden;
   position: fixed;
-  margin-bottom: 2em;
   padding: 1%;
   width: 70%;
   height: 2em;
   user-select: none;
   backdrop-filter: blur(0.5rem);
   display: none;
+  bottom:10%;
+}
+.navbar-button {
+  width:25%;
+  color:beige;
+  height:100%;
 }
 .bottombar {
   background: none;
@@ -66,7 +71,7 @@ p {
   background-color: #2d2d2d;
   text-align: center;
   padding: 14px 16px;
-  padding-bottom: 5%;
+  padding-bottom: 3%;
   text-decoration: none;
   font-size: 17px;
   bottom:0;
