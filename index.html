@@ -1,4 +1,4 @@
-<!--Using microsoft template as example to build on.-->
+<!--Test Page.-->
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
   <head>
@@ -11,29 +11,17 @@
     <link rel="stylesheet" href="/css/converter.css" />
   </head>
   <body>
-    <h1>Temperature converter</h1>
-    <form id="converter">
-        <label for="input-temp">temperature</label>
-        <input type="text" id="input-temp" name="input-temp" value="20" />
-        <label for="input-unit">from</label>
-        <select id="input-unit" name="input-unit">
-          <option value="c" selected>Celsius</option>
-          <option value="f">Fahrenheit</option>
-          <option value="k">Kelvin</option>
-        </select>
-        <label for="output-unit">to</label>
-        <select id="output-unit" name="output-unit">
-          <option value="c">Celsius</option>
-          <option value="f" selected>Fahrenheit</option>
-          <option value="k">Kelvin</option>
-        </select>
-        <output name="output-temp" id="output-temp" for="input-temp input-unit output-unit">68 F</output>
-    </form>
-    <script src="/converter.js"></script>
+    <h1>Test Page</h1>
+    <div class="main">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nihil voluptatem autem nostrum neque est explicabo temporibus quos in! Ea officia iste animi labore nam velit, voluptas est autem libero.</p>
+    </div>
+    <div class="bottom-bar"></div>
+    <script src="/src/main.js"></script>
     <script>
         if('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('/sw.js', { scope: '/' });
+          navigator.serviceWorker.register('/src/sw.js', { scope: '/' });
         }
     </script>
   </body>
+  <footer><p id="footer-text">test page. v0.1 &#169 Maiajas 2023.</p></footer>
 </html>
