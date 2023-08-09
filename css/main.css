@@ -40,11 +40,13 @@ p {
   background: hsla(0, 1%, 19%, 0.3);
   overflow: hidden;
   position: fixed;
-  bottom: 20%;
+  margin-bottom: 20%;
   padding: 1%;
-  width: 80%;
+  width: 70%;
+  height: 20em;
   user-select: none;
   backdrop-filter: blur(0.5rem);
+  display: none;
 }
 .bottombar {
   background: none;
@@ -55,7 +57,7 @@ p {
   width: 100%;
   user-select: none;
 }
-.bottombar .bottombar-home {
+.bottombar #bottombar-home {
   float: none;
   position: fixed;
   user-select: none;
@@ -69,7 +71,7 @@ p {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-.bottombar  .bottombar-home:hover {
+.bottombar #bottombar-home:hover {
   background-color: #ddd;
   color: black;
 }
