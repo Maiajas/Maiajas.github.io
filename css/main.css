@@ -29,14 +29,17 @@ p {
   color: rgb(1, 1, 1);  
   font-size: 8px;
 }
-.main {
-
+.main-page {
+  background-color: darksalmon;
+  margin: 0;
+  padding: 0;
 }
 .navbar {
   background-color: #333;
   overflow: hidden;
   position: fixed;
   bottom: 0;
+  padding-bottom: 3%;
   width: 100%;
 }
 
