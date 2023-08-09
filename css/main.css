@@ -23,6 +23,7 @@ p {
   font-size: 20px;
   text-align: center;
   text-shadow:blanchedalmond;
+  padding: 5px;
 }
 #footer-text {
   font-family: verdana;
@@ -43,7 +44,7 @@ p {
   width: 100%;
 }
 
-.navbar a {
+.navbar #bottombar-tag {
   float: left;
   display: block;
   color: #f2f2f2;
@@ -51,12 +52,21 @@ p {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+}.navbar #bottombar-home {
+  float: left;
+  display: block;
+  color: #b61313;
+  background-color: #505050;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
-.navbar a:hover {
+.navbar #bottombar-tag:hover {
   background-color: #ddd;
   color: black;
 }
-.navbar a.active {
+.navbar #bottombar-tag.active {
   background-color: #04AA6D;
   color: white;
 }
