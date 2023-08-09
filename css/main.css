@@ -47,7 +47,7 @@ p {
   backdrop-filter: blur(0.5rem);
 }
 
-.navbar #bottombar-tag {
+.navbar .bottombar-tag {
   float: left;
   display: block;
   color: #f2f2f2;
@@ -56,7 +56,7 @@ p {
   text-decoration: none;
   font-size: 17px;
 }
-.navbar #bottombar-home {
+.navbar .bottombar-home {
   float: none;
   position: fixed;
   display: block;
@@ -66,13 +66,13 @@ p {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  margin-left: 50%;
+  margin-left: 43%;
 }
-.navbar #bottombar-tag:hover {
+.navbar .bottombar-tag:hover {
   background-color: #ddd;
   color: black;
 }
-.navbar #bottombar-tag.active {
+.navbar .bottombar-tag.active {
   background-color: #04AA6D;
   color: white;
 }
