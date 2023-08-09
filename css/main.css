@@ -76,8 +76,10 @@ p {
   font-size: 17px;
   bottom:0;
   margin:0;
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  -ms-transform: translateX(-48%);
+  transform: translateX(-48%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
 }
 #navbar-home:hover {
   background-color: #ddd;
