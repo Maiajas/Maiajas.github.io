@@ -44,6 +44,7 @@ p {
   padding-bottom: 5%;
   width: 100%;
   user-select: none;
+  backdrop-filter: blur(0.5rem);
 }
 
 .navbar #bottombar-tag {
