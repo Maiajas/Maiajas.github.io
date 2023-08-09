@@ -67,6 +67,8 @@ p {
   text-decoration: none;
   font-size: 17px;
   margin-left: 43%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .navbar .bottombar-tag:hover {
   background-color: #ddd;
