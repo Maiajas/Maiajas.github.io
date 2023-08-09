@@ -3,7 +3,7 @@
     "name": "Test Page App",
     "short_name": "Test APP",
     "description": "A test page for a future PWM",
-    "start_url": "/index.html",
+    "start_url": "/",
     "background_color": "#2f3d58",
     "theme_color": "#2f3d58",
     "orientation": "any",
