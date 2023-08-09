@@ -72,7 +72,7 @@ p {
   background-color: #ddd;
   color: black;
 }
-.navbar .bottombar-tag.active {
-  background-color: #04AA6D;
+.navbar .bottombar-tag:active {
+  background-color: #a8e7d0;
   color: white;
 }
