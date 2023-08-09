@@ -59,7 +59,7 @@ p {
 }
 #nav-home {
   float: none;
-  position: fixed;
+  position: absolute;
   user-select: none;
   display: block;
   color: #f3ecec;
