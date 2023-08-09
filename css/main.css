@@ -57,7 +57,7 @@ p {
   width: 100%;
   user-select: none;
 }
-.bottombar #bottombar-home {
+#nav-home {
   float: none;
   position: fixed;
   user-select: none;
@@ -71,7 +71,7 @@ p {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-.bottombar #bottombar-home:hover {
+#navbar-home:hover {
   background-color: #ddd;
   color: black;
 }
