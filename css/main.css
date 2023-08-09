@@ -21,6 +21,8 @@ h1 {
 p {
   font-family: verdana;
   font-size: 20px;
+  text-align: center;
+  text-shadow:blanchedalmond;
 }
 #footer-text {
   font-family: verdana;
