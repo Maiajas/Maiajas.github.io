@@ -1,7 +1,7 @@
 {
     "lang": "en-us",
     "name": "Test Page App",
-    "short_name": "Test APP",
+    "short_name": "Maiajas",
     "description": "A test page for a future PWM",
     "start_url": "/",
     "background_color": "#2f3d58",

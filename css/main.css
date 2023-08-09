@@ -66,8 +66,11 @@ p {
   background-color: #2d2d2d;
   text-align: center;
   padding: 14px 16px;
+  padding-bottom: 5%;
   text-decoration: none;
   font-size: 17px;
+  bottom:0;
+  margin:0;
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
