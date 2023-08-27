@@ -6,6 +6,21 @@ h1,h2,h3,p{
     padding:0;
     margin:0;
 }
+.js-disabled{
+    user-select:none;
+    text-align: center;
+    padding: 2%;
+    margin:5%;
+    margin-bottom:1%;
+    background-color: #ffd2aa;
+    color:rgb(0, 0, 0);
+    align-items: center;
+    border-radius: .5rem;
+    box-shadow: 0 0 3rem 0 #0001;
+    min-height:200px;
+    display:block;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 .ro-text{
     user-select:none;
 }
