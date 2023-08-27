@@ -151,13 +151,14 @@ function mainSetup(target){
                 if(activity_name.value!=""&&activity_time.value!=""&&activity_type.value!=""&&activity_description.value!=""){
                     const newActivity = new Activity(activity_name.value,parseInt(activity_time.value),activity_type.value,activity_description.value);
                     const _result = newSchedule.add(newActivity);
-                    console.log(_result);
-                    if(_result===true){
+                    if(_result){
+                        console.log(_result);
                         console.log('activity created');
                         activityWindow.delete();
-                    }else if(_result===false){
+                    }else{
+                        console.log(_result);
                         console.log('activity create fail');
-                        saveData('error',window.console);
+                        //saveData('error',window.console);
                     }
                 }                
             });
