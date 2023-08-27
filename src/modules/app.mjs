@@ -157,7 +157,7 @@ function mainSetup(target){
                         activityWindow.delete();
                     }else if(_result===false){
                         console.log('activity create fail');
-                        saveData('error',console);
+                        saveData('error',console.log);
                     }
                 }                
             });
