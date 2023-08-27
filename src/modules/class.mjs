@@ -21,7 +21,7 @@ class Schedule{
     }
     add(activity){
         this.counter+=activity.duration;
-        if(this.counter<this.dailytime){
+        if(this.counter<=this.dailytime){
             this.usedtime+=activity.duration;
             this.activities.push(activity);
             console.log('counter',this.counter);

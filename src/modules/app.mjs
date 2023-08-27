@@ -166,7 +166,7 @@ function mainSetup(target){
                         error_popup.addWindow('popup_window');
                         error_popup.addElement('h1','activity_setup_error_title','popup-title');
                         error_popup.addBreak(1);
-                        error_popup.addElement('p','activity_setup_error_text','popup-text');
+                        error_popup.addElement('p','activity_setup_error_text','popup-text','schedule full.');
                         error_popup.addBreak(4);
                         error_popup.addButton('close_button',function(){
                             error_popup.delete();
