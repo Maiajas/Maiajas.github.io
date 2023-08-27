@@ -2,7 +2,7 @@
 import { mainWindow } from "./class.mjs";
 import { landingPage } from "./app.mjs";
 
-export function createElement(type,newid,newclass,target,body){
+function createElement(type,newid,newclass,target,body){
     const newElement = document.createElement(type);
     newElement.id = newid;
     newElement.classList.add(newclass);
@@ -35,17 +35,17 @@ export function createElement(type,newid,newclass,target,body){
     }
     return newElement;
 } 
-export async function getBasicInfo(){
+async function getBasicInfo(){
     const basicinfo = window.navigator;
     return basicinfo;
 }
-export async function getID(element){
+async function getID(element){
     const id = element.id;
     //console.log(0,target,"getID");
     //console.log(1,element,"getID");
     return id;
 }
-export async function changeLang(targetlang){
+async function changeLang(targetlang){
     const settings = await loadData("settings","session");
     //console.log(0,settings,"changelang");
     //console.log(1,targetlang,"changelang");
@@ -55,7 +55,7 @@ export async function changeLang(targetlang){
     updateText();    
     return;
 }
-export async function updateText(){
+async function updateText(){
     //console.log("Update text.");
     const settings = await loadData("settings","session");
     //console.log(0,settings,"updatetext");
@@ -194,7 +194,7 @@ export async function updateText(){
         }
     }
 }
-export async function fetchJSON(targetFile,label,target){
+async function fetchJSON(targetFile,label,target){
     const response = await fetch(targetFile);
     const data = await response.json();
     //console.log(data,"fetchjson","data");
@@ -217,7 +217,7 @@ export async function fetchJSON(targetFile,label,target){
         return data;
     }
 }
-export async function firstLoad(){
+async function firstLoad(){
     let jsWarning = document.querySelectorAll('.js-disabled');
     for(let i=0;i<jsWarning.length;i++){
         jsWarning[i].remove();
@@ -251,7 +251,7 @@ export async function firstLoad(){
     havefun.add(secondloaded);
     console.log(havefun);*/
 }
-export function saveData(label,data){
+function saveData(label,data){
     if(data==null){
         data = JSON.parse(sessionStorage.getItem(label));
         localStorage.setItem(label,JSON.stringify(data));
@@ -260,7 +260,7 @@ export function saveData(label,data){
         sessionStorage.setItem(label,JSON.stringify(data));
     }
 }
-export function loadData(label,type){
+function loadData(label,type){
     if(type=="session"){
         const data = JSON.parse(sessionStorage.getItem(label));
         return data;
@@ -269,7 +269,7 @@ export function loadData(label,type){
         return data;
     }
 }
-export async function backupHandler(btarget,text){
+async function backupHandler(btarget,text){
     const backupWindow = new mainWindow('upload_window','app-window');
     backupWindow.popup('10%','30%');
     backupWindow.addWindow('upload_form','form');
@@ -336,3 +336,5 @@ export async function backupHandler(btarget,text){
         saveData(btarget, json);
     }
 }
+
+export { createElement,getBasicInfo,getID,changeLang,updateText,fetchJSON,firstLoad,saveData,loadData,backupHandler };

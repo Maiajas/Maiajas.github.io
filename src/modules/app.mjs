@@ -14,7 +14,7 @@ const mainwindow = new mainWindow("main_window");
 mainwindow.addWindow("loading_window");
 const Footer = createElement("footer","footer","ro-text","",true);
 //mainwindow.addFromTemplate('/assets/templates/setup-window.json','setupWindow');
-export function landingPage(){
+function landingPage(){
     document.querySelector('title').id = 'title_landing';
     mainwindow.empty();
     mainwindow.addWindow("landing_page");
@@ -158,7 +158,18 @@ function mainSetup(target){
                     }else if(!_result){
                         console.log(_result);
                         console.log('activity create fail');
-                        activityWindow.delete();
+                        const error_popup = new mainWindow('error_popup','app-window');
+                        error_popup.popup('20%','40%');
+                        error_popup.addWindow('popup_window');
+                        error_popup.addElement('h1','activity_setup_error_title','popup-title');
+                        error_popup.addBreak(1);
+                        error_popup.addElement('p','activity_setup_error_text','popup-text');
+                        error_popup.addBreak(4);
+                        error_popup.addButton('close_button',function(){
+                            activityWindow.delete();
+                            error_popup.delete();
+                        });
+                        updateText();
                         //saveData('error',window.console);
                     }
                 }                
@@ -388,7 +399,7 @@ function appMainStage(){
     }
     updateText();
 }
-export function errorPage(){
+function errorPage(){
     console.log("loading errorpage");
     //cleanup UI
     mainwindow.empty();
@@ -407,3 +418,5 @@ export function errorPage(){
     mainwindow.addElement('p','info_text','main-window',basicInfoOutput);
     updateText();
 }
+
+export { landingPage };

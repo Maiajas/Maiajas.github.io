@@ -1,6 +1,6 @@
 "use strict";
 import { createElement,fetchJSON,loadData } from "./func.mjs";
-export class Activity{
+class Activity{
     constructor(name,duration,type,description){
         this.name = name;
         this.duration = duration;
@@ -9,7 +9,7 @@ export class Activity{
         this.completed = false;
     }
 }
-export class Schedule{
+class Schedule{
     constructor(name,username,dailytime,description){
         this.activities = [];
         this.name = name;
@@ -36,7 +36,7 @@ export class Schedule{
         }
     }
 }
-export class mainWindow{
+class mainWindow{
     constructor(id,eclass){
         let dclass;
         if(eclass==undefined){
@@ -131,7 +131,7 @@ export class mainWindow{
         this.mainwindow.remove();
     }
 }
-export class navBar{
+class navBar{
     constructor(){
         this.navBar = createElement("div","home-main-topbar","navbar","",true);
         this.subelements = [];
@@ -165,9 +165,11 @@ export class navBar{
 
     }
 }
-export class practiceSession{
+class practiceSession{
     constructor(dailytime){
         this.dailytime;
         this.activities = [];
     }
 }
+
+export { Activity,Schedule,mainWindow,navBar,practiceSession };

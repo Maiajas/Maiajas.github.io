@@ -1,7 +1,9 @@
 "use strict";
 import { firstLoad } from "./modules/func.mjs";
-firstLoad();
-window.addEventListener('load', () => {registerSW();});
+window.addEventListener('load', () => {
+    registerSW();
+    firstLoad();
+});
 async function registerSW() {
     if ('serviceWorker' in navigator) {
         try {
