@@ -46,6 +46,7 @@ function mainSetup(target){
             document.getElementById('loader_window').remove();
         }
         //Setup 1
+        console.log(setupContent);
         const setupwindow = new mainWindow('setup_container','setup-window');
         setupwindow.popup('8%','25%');
         setupwindow.addWindow('setup1_window','form'); 
@@ -158,6 +159,7 @@ function mainSetup(target){
                     }else if(!_result){
                         console.log(_result);
                         console.log('activity create fail');
+                        activityWindow.delete();
                         const error_popup = new mainWindow('error_popup','app-window');
                         error_popup.popup('20%','40%');
                         error_popup.addWindow('popup_window');
@@ -166,7 +168,6 @@ function mainSetup(target){
                         error_popup.addElement('p','activity_setup_error_text','popup-text');
                         error_popup.addBreak(4);
                         error_popup.addButton('close_button',function(){
-                            activityWindow.delete();
                             error_popup.delete();
                         });
                         updateText();
