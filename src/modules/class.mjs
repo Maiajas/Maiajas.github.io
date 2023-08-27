@@ -29,8 +29,10 @@ export class Schedule{
             this.usedtime=(this.usedtime+activity.duration);
             this.activities.push(activity);
             console.log("pushing activity:",activity);
+            return true;
         }else{
             console.log("schedule is full.");
+            return false;
         }
     }
 }
