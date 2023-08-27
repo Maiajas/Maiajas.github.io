@@ -156,22 +156,8 @@ function mainSetup(target){
                         console.log('activity created');
                         activityWindow.delete();
                     }else if(_result===false){
-                        saveData('error',newSchedule);
-                        console.log('activity create fail',1);
-                        const error_popup = new mainWindow('activity_fail','app-window');
-                        error_popup.popup('20%','40%');
-                        console.log('activity create fail',2);
-                        error_popup.addWindow('popup_window');
-                        console.log('activity create fail',3);
-                        error_popup.addElement('h1','activity_setup_error_title','popup-title');
-                        console.log('activity create fail',4);
-                        error_popup.addBreak(1);
-                        error_popup.addElement('p','activity_setup_error_text','popup-text');
-                        error_popup.addBreak(4);
-                        error_popup.addButton('close_button',function(){
-                            error_popup.delete();
-                        });
-                        updateText();
+                        console.log('activity create fail');
+                        saveData('error',console);
                     }
                 }                
             });
