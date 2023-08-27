@@ -259,12 +259,10 @@ function loaderWindow(){
             const mainContainer = document.getElementById(windowID+'_container');
             loaderwindow.addElement('h2',text_LABEL_N_ID,'activity_text_label','Schedule: ',mainContainer);
             loaderwindow.addElement('div',windowID,'app-window','',mainContainer);
-            loaderwindow.addElement('button',btnID+'_load','app-window','load.',mainContainer);
-            loaderwindow.addElement('button',btnID+'_delete','app-window','delete.',mainContainer);
+            loaderwindow.addElement('button',btnID+'_load','loader_button','load.',mainContainer);
+            loaderwindow.addElement('button',btnID+'_delete','loader_button','delete.',mainContainer);
             const deleteBtn = document.getElementById(btnID+'_delete');
             const loadBtn = document.getElementById(btnID+'_load');
-            deleteBtn.classList.add('loader_button');
-            loadBtn.classList.add('loader_button');
             const tarwin = document.getElementById(windowID);
             tarwin.classList.add('loader_schedule_card');
             loadBtn.onclick = function(){
