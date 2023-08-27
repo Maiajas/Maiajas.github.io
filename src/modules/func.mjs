@@ -171,7 +171,7 @@ export async function updateText(){
                 document.getElementById(element_id[i]).innerHTML = labels.ERROR_LOADER_POPUP_TEXT;
             }
             if(element_id[i]=='footer'){
-                document.getElementById(element_id[i]).innerHTML = labels.FOOTER_TEXT;
+                document.getElementById(element_id[i]).innerHTML = labels.FOOTER_TEXT+'v'+settings.VERSION;
             }
             if(element_id[i]=='setup_page1_title'){
                 document.getElementById(element_id[i]).innerHTML = labels.H1_SETUP1;
