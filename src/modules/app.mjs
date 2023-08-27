@@ -155,9 +155,6 @@ function mainSetup(target){
                     if(_result){
                         activityWindow.delete();
                     }else{
-                        if(document.getElementById('error_popup')){
-                            document.getElementById('error_popup').remove();
-                        }
                         const error_popup = new mainWindow('error_popup','app-window');
                         error_popup.popup('20%','40%');
                         error_popup.addWindow('popup_window');
