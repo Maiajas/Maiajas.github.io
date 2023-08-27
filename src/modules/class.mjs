@@ -20,13 +20,13 @@ export class Schedule{
         this.counter = 0;
     }
     add(activity){
-        this.counter+=activity.duration;
+        this.counter=(this.counter+activity.duration);
         if(this.counter<this.dailytime){
             console.log('counter',this.counter);
             console.log('usedtime',this.usedtime);
             console.log('activity.duration',activity.duration);
             console.log('dailytime',this.dailytime);
-            this.usedtime+=activity.duration;
+            this.usedtime=(this.usedtime+activity.duration);
             this.activities.push(activity);
             console.log("pushing activity:",activity);
         }else{

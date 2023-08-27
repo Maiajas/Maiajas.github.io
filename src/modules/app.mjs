@@ -156,6 +156,7 @@ function mainSetup(target){
         setupwindow.addCreationButton('activity',function(){
             createActivity();
         });
+        setupwindow.addBreak(2);
         setupwindow.addButton('back_button',function(){
             setupwindow.delete();
             mainSetup("setup2");
