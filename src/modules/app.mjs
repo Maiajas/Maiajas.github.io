@@ -257,7 +257,7 @@ function loaderWindow(){
             console.log(activityDB.schedules[i]);
             loaderwindow.addElement('div',windowID+'_container','main-window');
             const mainContainer = document.getElementById(windowID+'_container');
-            loaderwindow.addElement('h2',text_LABEL_N_ID,'activity_text_label','Schedule: '+(i+1)+' ['+activityDB.schedules[i].name+']',mainContainer);
+            loaderwindow.addElement('h2',text_LABEL_N_ID,'activity_text_label','Schedule: ',mainContainer);
             loaderwindow.addElement('div',windowID,'app-window','',mainContainer);
             loaderwindow.addElement('button',btnID+'_load','app-window','load.',mainContainer);
             loaderwindow.addElement('button',btnID+'_delete','app-window','delete.',mainContainer);

@@ -139,14 +139,14 @@ footer{
 .loader_button{
     display:inline-block !important;
     margin:1% !important;
-    padding:0;
-    border:0;
+    padding:0 !important;
+    border:0 !important;
     color:rgb(0, 0, 0);
     background-color: rgba(201, 100, 89, 0.348);
-    width:10%;
-    height:10px;
-    max-width:60px;
-    max-height:60px;
+    width:10% !important;
+    height:10px !important;
+    max-width:60px !important;
+    max-height:60px !important;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.097) !important;
 }
 
