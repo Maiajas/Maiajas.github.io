@@ -149,7 +149,7 @@ function mainSetup(target){
                 console.log(activity_type.value);   
                 const activity_description = document.getElementById('s4_activity_description_field');
                 if(activity_name.value!=""&&activity_time.value!=""&&activity_type.value!=""&&activity_description.value!=""){
-                    const newActivity = new Activity(activity_name.parseInt(value,activity_time.value),activity_type.value,activity_description.value);
+                    const newActivity = new Activity(activity_name.value,parseInt(activity_time.value),activity_type.value,activity_description.value);
                     const _result = newSchedule.add(newActivity);
                     console.log(_result);
                     activityWindow.delete();
