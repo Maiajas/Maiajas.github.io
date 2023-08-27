@@ -156,6 +156,7 @@ function mainSetup(target){
                         console.log('activity created');
                         activityWindow.delete();
                     }else if(_result===false){
+                        saveData('error',newSchedule);
                         console.log('activity create fail',1);
                         const error_popup = new mainWindow('activity_fail','app-window');
                         error_popup.popup('20%','40%');
