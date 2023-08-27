@@ -155,7 +155,7 @@ function mainSetup(target){
                         console.log(_result);
                         console.log('activity created');
                         activityWindow.delete();
-                    }else{
+                    }else if(!_result){
                         console.log(_result);
                         console.log('activity create fail');
                         //saveData('error',window.console);
