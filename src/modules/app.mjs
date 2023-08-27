@@ -160,7 +160,6 @@ function mainSetup(target){
                         console.log('newActivity',newActivity);
                         console.log('newSchedule',newSchedule);
                         console.log('activity create fail');
-                        newSchedule.counter-parseInt(activity_time.value);
                         activityWindow.delete();
                         const error_popup = new mainWindow('error_popup','app-window');
                         error_popup.popup('20%','40%');

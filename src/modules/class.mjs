@@ -31,6 +31,7 @@ class Schedule{
             console.log("pushing activity:",activity);
             return true;
         }else{
+            this.counter-=activity.duration;
             console.log("schedule is full.");
             return false;
         }
