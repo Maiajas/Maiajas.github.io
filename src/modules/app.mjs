@@ -154,10 +154,11 @@ function mainSetup(target){
                     if(_result){
                         console.log(_result);
                         console.log('activity created');
-                        //activityWindow.delete();
+                        activityWindow.delete();
                     }else if(!_result){
                         console.log(_result);
                         console.log('activity create fail');
+                        activityWindow.delete();
                         //saveData('error',window.console);
                     }
                 }                
