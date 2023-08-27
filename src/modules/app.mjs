@@ -154,10 +154,14 @@ function mainSetup(target){
                     const _result = newSchedule.add(newActivity);
                     if(_result){
                         console.log(_result);
+                        console.log('newActivity',newActivity);
+                        console.log('newSchedule',newSchedule);
                         console.log('activity created');
                         activityWindow.delete();
                     }else if(!_result){
                         console.log(_result);
+                        console.log('newActivity',newActivity);
+                        console.log('newSchedule',newSchedule);
                         console.log('activity create fail');
                         activityWindow.delete();
                         const error_popup = new mainWindow('error_popup','app-window');

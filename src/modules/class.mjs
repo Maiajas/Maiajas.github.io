@@ -35,6 +35,14 @@ class Schedule{
             return false;
         }
     }
+    remove(activity){
+        console.log(this.activities);
+        for(let i=0;i<this.activities.length;i++){
+            if(this.activities[i].contains(activity)){
+                delete this.activities[i];    
+            }
+        }
+    }
 }
 class mainWindow{
     constructor(id,eclass){
