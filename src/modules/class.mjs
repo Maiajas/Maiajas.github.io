@@ -104,14 +104,17 @@ export class mainWindow{
         subelement.onclick = click;
         this.subelements.push(subelement);
     }
-    addInput(id,type){
+    addInput(id,type,req){
         const labelID = id+"_label";
         const fieldID = id+"_field";
         const subLabel = createElement('label',labelID,'input-label',this.subwindow,false);
         const subInput = createElement('input',fieldID,'input-field',this.subwindow,false);        
         subLabel.for = fieldID;
         subInput.type = type;
-        subInput.required = true;
+        if(req==undefined){
+            req=true;
+        }        
+        subInput.required = req;
         this.subelements.push(subLabel);
         this.subelements.push(subInput);
     }

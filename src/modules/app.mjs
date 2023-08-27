@@ -120,7 +120,7 @@ function mainSetup(target){
             activityDB.schedules = [];
         }
         const newSchedule = new Schedule(setupContent.scheduleName,setupContent.name,parseInt(setupContent.totalSessionTime),setupContent.scheduleDescription);
-        function createActivity(){
+        setupwindow.addCreationButton('activity',function(){
             if(document.getElementById('createActivity_window')){
                 document.getElementById('createActivity_window').remove();
             }
@@ -152,13 +152,18 @@ function mainSetup(target){
                     const newActivity = new Activity(activity_name.value,parseInt(activity_time.value),activity_type.value,activity_description.value);
                     const _result = newSchedule.add(newActivity);
                     console.log(_result);
-                    if(_result){
+                    if(_result===true){
+                        console.log('activity created');
                         activityWindow.delete();
-                    }else{
-                        const error_popup = new mainWindow('error_popup','app-window');
+                    }else if(_result===false){
+                        console.log('activity create fail',1);
+                        const error_popup = new mainWindow('activity_fail','app-window');
                         error_popup.popup('20%','40%');
+                        console.log('activity create fail',2);
                         error_popup.addWindow('popup_window');
+                        console.log('activity create fail',3);
                         error_popup.addElement('h1','activity_setup_error_title','popup-title');
+                        console.log('activity create fail',4);
                         error_popup.addBreak(1);
                         error_popup.addElement('p','activity_setup_error_text','popup-text');
                         error_popup.addBreak(4);
@@ -170,9 +175,6 @@ function mainSetup(target){
                 }                
             });
             updateText(); 
-        }
-        setupwindow.addCreationButton('activity',function(){
-            createActivity();
         });
         setupwindow.addBreak(2);
         setupwindow.addButton('back_button',function(){
