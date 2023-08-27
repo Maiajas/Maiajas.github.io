@@ -74,6 +74,18 @@ export async function updateText(){
             if(element_id[i]=='loading_window'){
                 document.getElementById(element_id[i]).innerHTML = labels.WINDOW_LOADING;
             }
+            if(element_id[i]=='title_landing'){
+                document.getElementById('title_landing').innerHTML = labels.TITLE_LANDING;
+            }
+            if(element_id[i]=='title_loading'){
+                document.getElementById('title_loading').innerHTML = labels.TITLE_LOADING;
+            }
+            if(element_id[i]=='title_setup'){
+                document.getElementById('title_setup').innerHTML = labels.TITLE_SETUP;
+            }
+            if(element_id[i]=='title_mainapp'){
+                document.getElementById('title_mainapp').innerHTML = labels.TITLE_MAINAPP;
+            }
             if(element_id[i]=='error_text'){
                 document.getElementById(element_id[i]).innerHTML = labels.WINDOW_ERROR;
             }

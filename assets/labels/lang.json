@@ -1,6 +1,10 @@
 {
     "EN":{
         "FOOTER_TEXT":"Practice Scheduler by Maiajas ©2023.<br>All Rights Reserved.<br>",
+        "TITLE_LANDING":"Practice Scheduler",
+        "TITLE_LOADING":"Practice Scheduler - Load a saved schedule",
+        "TITLE_SETUP":"Practice Scheduler - Create a new schedule",
+        "TITLE_MAINAPP":"Practice Scheduler - Practice!",
         "NEXT_BUTTON":"Next.",
         "BACK_BUTTON":"Back.",
         "EXIT_BUTTON":"Exit.",
@@ -38,6 +42,10 @@
     },
     "NL":{
         "FOOTER_TEXT":"Practice Scheduler door Maiajas ©2023.<br>Alle Rechten Voorbehouden.<br>",
+        "TITLE_LANDING":"Practice Scheduler",
+        "TITLE_LOADING":"Practice Scheduler - Laad een opgeslagen schema",
+        "TITLE_SETUP":"Practice Scheduler - Maak een nieuw oefenschema",
+        "TITLE_MAINAPP":"Practice Scheduler - Oefenen!",
         "NEXT_BUTTON":"Volgende.",
         "BACK_BUTTON":"Vorige.",
         "EXIT_BUTTON":"Sluiten.",

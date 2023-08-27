@@ -15,6 +15,7 @@ mainwindow.addWindow("loading_window");
 const Footer = createElement("footer","footer","ro-text","",true);
 //mainwindow.addFromTemplate('/assets/templates/setup-window.json','setupWindow');
 export function landingPage(){
+    document.querySelector('title').id = 'title_landing';
     mainwindow.empty();
     mainwindow.addWindow("landing_page");
     mainwindow.addElement('h1','setup1_H1','main-text');
@@ -26,8 +27,10 @@ export function landingPage(){
     mainwindow.addButton('setup_button',function(){
         mainSetup('setup1');
     });
+    updateText();
 }
 function mainSetup(target){
+    document.querySelector('title').id = 'title_setup';
     let setupContent = {};
     if(target=="setup1"){
         console.log("loading setup page 1");
@@ -204,6 +207,7 @@ function mainSetup(target){
     }
 }
 function loaderWindow(){
+    document.querySelector('title').id = 'title_loader';
     console.log("loading loader window");
     //Loader
     let activityDB = loadData('activityDB','local');
@@ -336,6 +340,7 @@ function loaderWindow(){
     }    
 }
 function appMainStage(){
+    document.querySelector('title').id = 'title_mainapp';
     mainwindow.empty();
     mainwindow.addWindow('mainapp_container');
     mainwindow.addElement('div','mainapp_info_card','app-window');
@@ -371,6 +376,7 @@ function appMainStage(){
         mainwindow.addElement('p',text_LABEL_A_ID,'activity_text_label','Completed: ',arwin);
         mainwindow.addElement('p',text_A_ID,'activity_text_content',JSON.stringify(activityDB.currentSchedule.activities[a].completed).replace(/["]/g,''),arwin);
     }
+    updateText();
 }
 export function errorPage(){
     console.log("loading errorpage");
