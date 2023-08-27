@@ -1,0 +1,11 @@
+{
+    "elements":[
+        "h1",
+        "p"
+    ],
+    "mid":[
+        "title",
+        "text"
+    ],
+    "mclass":"main-window"
+}
