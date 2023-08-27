@@ -1,0 +1,33 @@
+{
+    "name":"setupWindow",
+    "elements":[
+        "form",
+        "h1",
+        "p",
+        "br",
+        "br",
+        "br",
+        "button",
+        "button"
+    ],
+    "id":[
+        "setup_container",
+        "setup_page1_title",
+        "setup_page1_Text",
+        "br",
+        "br",
+        "br",
+        "continue_button",
+        "setup_button"
+    ],
+    "class":[
+        "setup-window",
+        "setup-text",
+        "setup-text",
+        "br",
+        "br",
+        "br",
+        "navButton",
+        "navButton"
+    ]
+}
