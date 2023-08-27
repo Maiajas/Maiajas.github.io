@@ -141,9 +141,12 @@ function mainSetup(target){
                 activityWindow.delete();
             });
             activityWindow.addCreationButton('confirm_button',function(){    
-                const activity_name = document.getElementById('s4_activity_name_field');  
-                const activity_time = document.getElementById('s4_activity_time_field');    
+                const activity_name = document.getElementById('s4_activity_name_field'); 
+                console.log(activity_name);    
+                const activity_time = document.getElementById('s4_activity_time_field'); 
+                console.log(activity_time);   
                 const activity_type = document.getElementById('s4_activity_type_field');
+                console.log(activity_type);   
                 const activity_description = document.getElementById('s4_activity_description_field');
                 if(activity_name.value!=""&&activity_time.value!=""&&activity_type.value!=""&&activity_description.value!=""){
                     const newActivity = new Activity(activity_name.value,activity_time.value,activity_type.value,activity_description.value);
