@@ -152,7 +152,24 @@ function mainSetup(target){
                     const newActivity = new Activity(activity_name.value,parseInt(activity_time.value),activity_type.value,activity_description.value);
                     const _result = newSchedule.add(newActivity);
                     console.log(_result);
-                    activityWindow.delete();
+                    if(_result){
+                        activityWindow.delete();
+                    }else{
+                        if(document.getElementById('error_popup')){
+                            document.getElementById('error_popup').remove();
+                        }
+                        const error_popup = new mainWindow('error_popup','app-window');
+                        error_popup.popup('20%','40%');
+                        error_popup.addWindow('popup_window');
+                        error_popup.addElement('h1','activity_setup_error_title','popup-title');
+                        error_popup.addBreak(1);
+                        error_popup.addElement('p','activity_setup_error_text','popup-text');
+                        error_popup.addBreak(4);
+                        error_popup.addButton('close_button',function(){
+                            error_popup.delete();
+                        });
+                        updateText();
+                    }
                 }                
             });
             updateText(); 
@@ -185,13 +202,13 @@ function mainSetup(target){
                 const error_popup = new mainWindow('error_popup','app-window');
                 error_popup.popup('20%','40%');
                 error_popup.addWindow('popup_window');
-                error_popup.addElement('h1','activity_setup_error_title','popup-text');
+                error_popup.addElement('h1','activity_setup_error_title','popup-title');
                 error_popup.addBreak(1);
-                error_popup.addElement('p','activity_setup_error_text','popup-content');
+                error_popup.addElement('p','activity_setup_error_text','popup-text');
                 error_popup.addBreak(4);
                 error_popup.addButton('close_button',function(){
                     error_popup.delete();
-                })
+                });
                 updateText();
             }
         });
