@@ -223,7 +223,9 @@ footer{
     width:auto;
     height:auto;
     min-height:20%;
-    min-width:40%;
+    width:30%;
+    margin-left:35%;
+    margin-right:35%;
     user-select:none;
     background-color: rgba(24, 12, 12, 0.3);
     color:beige;
@@ -232,7 +234,7 @@ footer{
     border-radius: .5rem;
     backdrop-filter: blur(0.2em);
     -webkit-backdrop-filter: blur(0.2em);
-    position:absolute;
+    position:flex;
     left:30%;
     top:20%;
 }
