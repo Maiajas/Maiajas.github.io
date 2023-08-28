@@ -92,7 +92,7 @@ footer{
     user-select:none;
     text-align: center;
     padding: 2%;
-    margin:5%;
+    margin:0 auto;
     margin-bottom:1%;
     background-color: rgba(255, 201, 196, 0.348);
     backdrop-filter: blur(0.2em);
