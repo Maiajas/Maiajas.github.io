@@ -293,7 +293,7 @@ function loaderWindow(){
         console.log('not null');
         //mainwindow.addWindow('app_window');
         const loaderwindow = new mainWindow('loader_window','app-window');
-        loaderwindow.popup('5%','8%');
+        loaderwindow.popup('0%','0%');
         loaderwindow.addWindow('app_window');
         loaderwindow.addElement('h2','loader_text','app-text','Saved schedules:');
         console.log(activityDB.schedules);

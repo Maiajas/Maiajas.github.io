@@ -232,7 +232,9 @@ async function firstLoad(){
     //await saveData("textLabels",textlabels);
     await changeLang(settings.LANG);
     await landingPage();
-    await autoLoad();
+    if(settings.AUTOLOAD){
+        await autoLoad();
+    }
     //console.log(document.getElementById("lang-en"));
     document.getElementById("lang-en").onclick = function(){changeLang("EN");};
     document.getElementById("lang-nl").onclick = function(){changeLang("NL");};
