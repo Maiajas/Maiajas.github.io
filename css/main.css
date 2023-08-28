@@ -41,7 +41,6 @@ footer{
     box-shadow: 0 0 3rem 0 #0001;
     min-height:200px;
     display: flex;
-	align-items: center;
 	justify-content: center;
     word-wrap:normal;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
