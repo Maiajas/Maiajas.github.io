@@ -121,10 +121,14 @@ class mainWindow{
         const subInput = createElement('input',fieldID,'input-field',this.subwindow,false);        
         subLabel.for = fieldID;
         subInput.type = type;
+        if(type=='number'){
+            subInput.min = 1;
+        }
         if(req==undefined){
             req=true;
         }        
         subInput.required = req;
+        subInput.width = 10;
         this.subelements.push(subLabel);
         this.subelements.push(subInput);
     }
