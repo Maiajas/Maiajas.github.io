@@ -99,6 +99,7 @@ class mainWindow{
             subelement.innerHTML = econtent;
         }
         this.subelements.push(subelement);
+        return subelement;
     }
     addButton(id,click,type){    
         if(type==undefined){

@@ -113,13 +113,6 @@ function mainSetup(target){
         setupwindow.addElement('h2','setup4_H2','setup-text');
         setupwindow.addElement('h3','setup4_H3','setup-text');
         setupwindow.addElement('p','setup4_P','setup-text'); 
-        let activityDB = {};
-        const _actDB = loadData("activityDB","local");
-        if(_actDB!=undefined){
-            activityDB = _actDB;
-        }else{
-            activityDB.schedules = [];
-        }
         const newSchedule = new Schedule(setupContent.scheduleName,setupContent.name,parseInt(setupContent.totalSessionTime),setupContent.scheduleDescription);
         setupwindow.addCreationButton('activity',function(){
             if(document.getElementById('createActivity_window')){
@@ -184,16 +177,19 @@ function mainSetup(target){
             mainSetup("setup2");
         });
         setupwindow.addButton('next_button',function(){
-            console.log(activityDB);
-            console.log(activityDB.schedules);
-            activityDB.schedules.push(newSchedule);
-            activityDB.currentSchedule = newSchedule;
-            console.log(activityDB.currentSchedule);
-            if(activityDB.currentSchedule.activities.length>0){
+            setupContent.pendingSchedule = newSchedule;
+            console.log(setupContent.pendingSchedule);
+            //console.log(activityDB);
+            //console.log(activityDB.schedules);
+            //activityDB.schedules.push(newSchedule);
+            //activityDB.currentSchedule = newSchedule;
+            //console.log(activityDB.currentSchedule);
+            if(setupContent.pendingSchedule.activities.length>0){
                 if(document.getElementById('createActivity_window')){
                     document.getElementById('createActivity_window').remove();
                 }
-                saveData("activityDB", activityDB);
+                //saveData("activityDB", activityDB);
+                saveData('setupcontent',setupContent);
                 setupwindow.delete();
                 mainSetup("setup4");
             }else{
@@ -217,15 +213,59 @@ function mainSetup(target){
     }else if(target=="setup4"){
         console.log("loading setup page 4");
         const setupwindow = new mainWindow('setup_container','setup-window');
-        const activityDB = loadData('activityDB','local');
+        let activityDB = {};
+        const _actDB = loadData("activityDB","local");
+        if(_actDB!=undefined){
+            activityDB = _actDB;
+        }else{
+            activityDB.schedules = [];
+        }
         //Setup 4
         const setupContent = loadData("setupcontent","session");
+        console.log(setupContent);
         setupwindow.popup('8%','25%');
         setupwindow.addWindow('setup4_window');
-        setupwindow.addElement('h2','setup5_H2','setup-text','Setup, page 4.');
-        setupwindow.addButton('close_button',function(){
+        setupwindow.addElement('h2','setup5_H2','setup-text','Confirm information:');
+        
+        const tawrin = setupwindow.addElement('div','setup4_schedule_container','app-window');   
+        tawrin.classList.add('loader_schedule_card');     
+        setupwindow.addElement('p','activity_text_label','activity_text_label','Schedule: ',tawrin);
+        setupwindow.addElement('p','activity_text_content','activity_text_content',JSON.stringify(setupContent.pendingSchedule.name).replace(/["]/g,''),tawrin);
+        setupwindow.addElement('p','activity_text_label','activity_text_label','Username: ',tawrin);
+        setupwindow.addElement('p','activity_text_content','activity_text_content',JSON.stringify(setupContent.pendingSchedule.username).replace(/["]/g,''),tawrin);
+        setupwindow.addElement('p','activity_text_label','activity_text_label','Total time (daily): ',tawrin);
+        setupwindow.addElement('p','activity_text_content','activity_text_content',JSON.stringify(setupContent.pendingSchedule.dailytime).replace(/["]/g,''),tawrin); 
+        setupwindow.addElement('p','activity_text_label','activity_text_label','Schedule description: ',tawrin);
+        setupwindow.addElement('p','activity_text_content','activity_text_content',JSON.stringify(setupContent.pendingSchedule.description).replace(/["]/g,''),tawrin); 
+        setupwindow.addBreak(1);
+        setupwindow.addButton('cancel_button',function(){
+            setupContent.pendingSchedule = [];
             setupwindow.delete();
         });
+        setupwindow.addButton('confirm_button',function(){
+            //console.log(activityDB);
+            //console.log(activityDB.schedules);
+            activityDB.schedules.push(setupContent.pendingSchedule);
+            activityDB.currentSchedule = setupContent.pendingSchedule;
+            saveData('activityDB',activityDB);
+            //console.log(activityDB.currentSchedule);
+            setupwindow.delete();
+        });
+        setupwindow.addBreak(1);
+        setupwindow.addElement('h2','activity_text_label','activity_text_label','Activities: ');
+        for(let a = 0;a<setupContent.pendingSchedule.activities.length;a++){
+            const arwin = setupwindow.addElement('div','setup4_activity_card','app-window');
+            arwin.classList.add('loader-activity-card');
+            //const arwin = document.getElementById('setup4_activity_card');
+            setupwindow.addElement('p','activity_text_label','activity_text_label','name: ',arwin);
+            setupwindow.addElement('p','activity_text_content','activity_text_content',JSON.stringify(setupContent.pendingSchedule.activities[a].name).replace(/["]/g,''),arwin);
+            setupwindow.addElement('p','activity_text_label','activity_text_label','Description: ',arwin);
+            setupwindow.addElement('p','activity_text_content','activity_text_content',JSON.stringify(setupContent.pendingSchedule.activities[a].description).replace(/["]/g,''),arwin);
+            setupwindow.addElement('p','activity_text_label','activity_text_label','Duration: ',arwin);
+            setupwindow.addElement('p','activity_text_content','activity_text_content',JSON.stringify(setupContent.pendingSchedule.activities[a].duration).replace(/["]/g,''),arwin);
+            setupwindow.addElement('p','activity_text_label','activity_text_label','Type of activity: ',arwin);
+            setupwindow.addElement('p','activity_text_content','activity_text_content',JSON.stringify(setupContent.pendingSchedule.activities[a].type).replace(/["]/g,''),arwin);
+        }
         updateText(); 
     }
 }
