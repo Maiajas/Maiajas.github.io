@@ -123,6 +123,7 @@ class mainWindow{
         subInput.type = type;
         if(type=='number'){
             subInput.min = 1;
+            subInput.max = (24*60);
         }
         if(req==undefined){
             req=true;

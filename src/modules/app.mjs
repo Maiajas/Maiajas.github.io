@@ -46,7 +46,7 @@ function mainSetup(target){
             document.getElementById('loader_window').remove();
         }
         //Setup 1
-        console.log(setupContent);
+        //console.log(setupContent);
         const setupwindow = new mainWindow('setup_container','setup-window');
         setupwindow.popup('8%','25%');
         setupwindow.addWindow('setup1_window','form'); 
@@ -254,8 +254,8 @@ function mainSetup(target){
         setupwindow.addBreak(1);
         setupwindow.addElement('h2','activity_text_label','activity_text_label','Activities: ');
         for(let a = 0;a<setupContent.pendingSchedule.activities.length;a++){
-            const arwin = setupwindow.addElement('div','setup4_activity_card','app-window');
-            arwin.classList.add('loader-activity-card');
+            const arwin = setupwindow.addElement('button','setup4_activity_card','app-window');
+            arwin.classList.add('app-activity-button');
             //const arwin = document.getElementById('setup4_activity_card');
             setupwindow.addElement('p','activity_text_label','activity_text_label','name: ',arwin);
             setupwindow.addElement('p','activity_text_content','activity_text_content',JSON.stringify(setupContent.pendingSchedule.activities[a].name).replace(/["]/g,''),arwin);
