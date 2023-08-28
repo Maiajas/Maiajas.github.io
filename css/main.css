@@ -105,7 +105,7 @@ footer{
     max-width:80%;
     width:auto;
     height:auto;
-	display: flex;
+	display: block;
 	align-items: center;
 	justify-content: center;
     word-wrap:normal;

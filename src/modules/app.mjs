@@ -420,8 +420,7 @@ function appMainStage(){
     mainwindow.addElement('h1','mainapp_landing_title','main-text','Main APP Test.',infoCard);
     mainwindow.addElement('p','mainapp_landing_text','main-text','testererer.',infoCard);
     const activityDB = loadData('activityDB','local');
-    mainwindow.addElement('p','mainapp_landing_text','main-text','Current schedule: '+activityDB.currentSchedule.name,infoCard);
-    console.log(activityDB.currentSchedule.activities.length);
+    saveData('inuseSchedule',activityDB.currentSchedule);
     mainwindow.addWindow('app_schedule_container');
     const tarwin = document.getElementById('app_schedule_container');
     mainwindow.addElement('p','activity_text_label','activity_text_label','Schedule name: ',infoCard);
@@ -469,5 +468,11 @@ function errorPage(){
     mainwindow.addElement('p','info_text','main-window',basicInfoOutput);
     updateText();
 }
-
-export { landingPage };
+function autoLoad(){
+    const inuseSchedule = loadData('inuseSchedule','local');
+    console.log(inuseSchedule);
+    if(inuseSchedule!=null){
+        appMainStage();
+    }
+}
+export { landingPage,autoLoad };

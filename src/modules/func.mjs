@@ -1,6 +1,6 @@
 "use strict";
 import { mainWindow } from "./class.mjs";
-import { landingPage } from "./app.mjs";
+import { landingPage,autoLoad } from "./app.mjs";
 
 function createElement(type,newid,newclass,target,body){
     const newElement = document.createElement(type);
@@ -232,6 +232,7 @@ async function firstLoad(){
     //await saveData("textLabels",textlabels);
     await changeLang(settings.LANG);
     await landingPage();
+    await autoLoad();
     //console.log(document.getElementById("lang-en"));
     document.getElementById("lang-en").onclick = function(){changeLang("EN");};
     document.getElementById("lang-nl").onclick = function(){changeLang("NL");};
