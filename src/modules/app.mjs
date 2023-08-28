@@ -252,7 +252,7 @@ function mainSetup(target){
             setupwindow.delete();
         });
         setupwindow.addBreak(1);
-        setupwindow.addElement('h2','activity_text_label','activity_text_label','Activities: ');
+        setupwindow.addElement('h2','activity_text_label','activity_text_label','Activities: (click to delete activity)');
         for(let a = 0;a<setupContent.pendingSchedule.activities.length;a++){
             const arwin = setupwindow.addElement('button','setup4_activity_card','app-window');
             arwin.classList.add('app-activity-button');
@@ -265,6 +265,15 @@ function mainSetup(target){
             setupwindow.addElement('p','activity_text_content','activity_text_content',JSON.stringify(setupContent.pendingSchedule.activities[a].duration).replace(/["]/g,''),arwin);
             setupwindow.addElement('p','activity_text_label','activity_text_label','Type of activity: ',arwin);
             setupwindow.addElement('p','activity_text_content','activity_text_content',JSON.stringify(setupContent.pendingSchedule.activities[a].type).replace(/["]/g,''),arwin);
+            arwin.onclick = function(){
+                delete setupContent.pendingSchedule.activities[a];
+                for(let i=0;i<setupContent.pendingSchedule.activities.length;i++){
+                    setupContent.pendingSchedule.activities = setupContent.pendingSchedule.activities.filter(function( element ) {
+                       return element !== null;
+                    });
+                }
+                arwin.remove();
+            };
         }
         updateText(); 
     }

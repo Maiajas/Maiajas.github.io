@@ -123,7 +123,7 @@ class mainWindow{
         subInput.type = type;
         if(type=='number'){
             subInput.min = 1;
-            subInput.max = (24*60);
+            subInput.max = 4;
         }
         if(req==undefined){
             req=true;
@@ -142,7 +142,7 @@ class mainWindow{
     empty(){
         this.mainwindow.replaceChildren();
     }
-    delete(){
+    delete(target){
         this.mainwindow.remove();
     }
 }
