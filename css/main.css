@@ -100,7 +100,7 @@ footer{
     color:rgb(0, 0, 0);
     align-items: center;
     border-radius: .5rem;
-    box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.327);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.327);
     min-height:200px;
     max-width:80%;
     width:auto;
@@ -240,21 +240,62 @@ footer{
     left:30%;
     top:20%;
 }
+.global-settings-popup{
+    background-color: #282115a0;
+    display:flex;
+    border-radius: .5rem;
+    backdrop-filter: blur(0.2em);
+    -webkit-backdrop-filter: blur(0.2em);
+    width:30%;
+    height:40%;
+}
 .navbar{
-    height:20px;
+    height:40px;
     padding:0;
     margin:1%;
     margin-bottom:0;
-    background-color: #FFDEAD;
-    color:rgb(78, 63, 63);
-    align-items: right;
-    text-align:right;
+    background-color: #262017;
+    color:rgb(237, 222, 222);
+    align-items: auto;
     border-radius: .5rem;
-    box-shadow: 0 0 3rem 0 #0001;
+    box-shadow: 0 0 3rem 0 rgba(137, 100, 100, 0.067);
     display:block;
-    padding-right:20px;
-    padding-left:20px;
+    padding-right:1%;
+    padding-left:2%;
     user-select:none;
+}
+.navbar-menu{
+    left:0;
+    margin:0;
+    padding:0;
+    margin-right:auto;
+    align-items: center;
+    align-self: left;
+    display:inline;
+    width:auto;
+    min-width:100px;
+    max-width:80%;
+    height:inherit;
+}
+.navBarButton{
+    width:auto;
+    min-width:60px;
+    height:inherit;
+    min-height:40px;
+    color:rgb(243, 212, 212);
+    background-color: #b89e96;
+    padding:0;
+    margin:0;
+    border:0;
+    display:inline;
+}
+.navBarButton:hover{
+    color:rgb(228, 200, 200);
+    background-color: #c7aba2;
+}
+.navBarButton:action{
+    color:rgb(211, 186, 186);
+    background-color: #e2c5bb;
 }
 #nav-divider{
     color:black;
@@ -266,17 +307,17 @@ footer{
     display:inline;
 }
 .langselect{
-    color:black;
+    color:rgb(214, 190, 190);
     font-size:15px;
     background: none;
-    width:30px;
-    height:20px;
+    width:40px;
+    height:40px;
     align-items:center;
     text-align:center;
     margin:0;
     padding:0;
     border:0;
-    display:inline;
+    display:inline-block;
 }
 .langselect:hover{
     color:rgb(153, 135, 108);

@@ -6,6 +6,30 @@ console.log('loadwindow, init');
 const navbar = new navBar();
 //navbar.addMenu();
 //navbar.addMenuButton('navbar_menu_home_button');
+const navMenu = navbar.addMenu();
+navbar.addMenuButton('navbar_menu_button',function(){
+    if(document.getElementById('global_settings_popup_container')){
+        document.getElementById('global_settings_popup_container').remove();
+        document.getElementById('global_settings_popup_container').remove();
+    }
+    const popupSettings = new mainWindow('global_settings_popup_container','global-settings-popup');
+    popupSettings.addWindow('global_settings_popup','div');
+    popupSettings.popup('8%','3%');
+    popupSettings.addBreak(1);
+    popupSettings.addButton('global_setting_button_1',function(){
+        const settings = loadData('settings','local');
+        console.log(settings.AUTOLOAD);
+        settings.AUTOLOAD = !settings.AUTOLOAD;
+        console.log(settings.AUTOLOAD);
+        saveData('settings',settings); 
+        location.reload();
+        popupSettings.delete();
+    });
+    popupSettings.addBreak(2);
+    popupSettings.addButton('global_setting_button_2',function(){
+        popupSettings.delete();
+    });
+});
 navbar.addLangButton('en');
 navbar.addDivider();
 navbar.addLangButton('nl');
@@ -293,7 +317,7 @@ function loaderWindow(){
         console.log('not null');
         //mainwindow.addWindow('app_window');
         const loaderwindow = new mainWindow('loader_window','app-window');
-        loaderwindow.popup('0%','0%');
+        loaderwindow.popup('10%','8%');
         loaderwindow.addWindow('app_window');
         loaderwindow.addElement('h2','loader_text','app-text','Saved schedules:');
         console.log(activityDB.schedules);

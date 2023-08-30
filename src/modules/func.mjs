@@ -51,7 +51,7 @@ async function changeLang(targetlang){
     //console.log(1,targetlang,"changelang");
     settings.LANG = targetlang;
     //sessionStorage.setItem("settings",JSON.stringify(settings));
-    saveData("settings",settings);
+    saveData("settings",settings,'session');
     updateText();    
     return;
 }
@@ -232,7 +232,9 @@ async function firstLoad(){
     //await saveData("textLabels",textlabels);
     await changeLang(settings.LANG);
     await landingPage();
-    if(settings.AUTOLOAD){
+    const lsettings = loadData('settings','local');
+    console.log(lsettings);
+    if(lsettings.AUTOLOAD){
         await autoLoad();
     }
     //console.log(document.getElementById("lang-en"));
@@ -254,13 +256,19 @@ async function firstLoad(){
     havefun.add(secondloaded);
     console.log(havefun);*/
 }
-function saveData(label,data){
+function saveData(label,data,target){
     if(data==null){
         data = JSON.parse(sessionStorage.getItem(label));
         localStorage.setItem(label,JSON.stringify(data));
     }else{
-        localStorage.setItem(label,JSON.stringify(data));
-        sessionStorage.setItem(label,JSON.stringify(data));
+        if(target==undefined){
+            localStorage.setItem(label,JSON.stringify(data));
+            sessionStorage.setItem(label,JSON.stringify(data));
+        }else if(target=='session'){
+            sessionStorage.setItem(label,JSON.stringify(data));
+        }else if(target=='local'){
+            localStorage.setItem(label,JSON.stringify(data));
+        }
     }
 }
 function loadData(label,type){

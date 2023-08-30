@@ -174,10 +174,12 @@ class navBar{
         subElement.classList.add("navbar-menu");
         this.navBar.insertBefore(subElement,this.navBar.firstChild);
         this.navBar.Menu = subElement;
+        return subElement;
     }
-    addMenuButton(id){
+    addMenuButton(id,click){
         const subElement = createElement("button",id,"navBarButton",this.navBar.Menu,false);
-
+        subElement.onclick = click;
+        //this.navBar.Menu.sub.push(subElement);
     }
 }
 class practiceSession{
