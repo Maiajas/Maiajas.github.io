@@ -241,13 +241,14 @@ footer{
     top:20%;
 }
 .global-settings-popup{
-    background-color: #282115a0;
+    background-color: #3126148f;
     display:flex;
     border-radius: .5rem;
     backdrop-filter: blur(0.2em);
     -webkit-backdrop-filter: blur(0.2em);
     width:30%;
     height:40%;
+    padding:1%;
 }
 .navbar{
     height:40px;
@@ -310,8 +311,8 @@ footer{
     color:rgb(214, 190, 190);
     font-size:15px;
     background: none;
-    width:40px;
-    height:40px;
+    width:40px !important;
+    height:40px !important;
     align-items:center;
     text-align:center;
     margin:0;

@@ -30,6 +30,7 @@ navbar.addMenuButton('navbar_menu_button',function(){
         popupSettings.delete();
     });
 });
+
 navbar.addLangButton('en');
 navbar.addDivider();
 navbar.addLangButton('nl');
