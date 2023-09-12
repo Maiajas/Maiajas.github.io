@@ -223,8 +223,8 @@ async function firstLoad(){
         jsWarning[i].remove();
     }
     //fetchJSON("/src/assets/json/window_templates.json","main-window");
-    const settings = await fetchJSON("/assets/labels/settings.json","settings","session");
-    const textlabels = await fetchJSON("/assets/labels/lang.json","textLabels");
+    const settings = await fetchJSON("./assets/labels/settings.json","settings","session");
+    const textlabels = await fetchJSON("./assets/labels/lang.json","textLabels");
     //console.log(0,settings,"firstload");
     //console.log(1,textlabels,"firstload");
     //console.log(2,settings.LANG,"firstload");
