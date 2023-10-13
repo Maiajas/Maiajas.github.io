@@ -1,0 +1,384 @@
+/* width */
+::-webkit-scrollbar {
+    width: 10px
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: rgba(32, 27, 3, 0.051);
+    border-radius: .5rem;
+    backdrop-filter: blur(0.2em);
+    -webkit-backdrop-filter: blur(0.2em);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #eca692ac;
+    border-radius: .5rem;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a67668ac;
+    transition: background 0.5s;
+  }
+  /* Handle on click */
+  ::-webkit-scrollbar-thumb:active {
+    background: #c48c7bac;
+    transition: background 0.5s;
+  }
+/* animations */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        }
+}
+.UIAnfIN{
+    animation: fadeInAnimation ease 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+@keyframes fadeOutAnimation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        }
+}
+.UIAnfOUT{
+    animation: fadeOutAnimation ease 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+/* GLOBAL UI */
+.UIBgNo{
+    background: none;
+}
+.UIBgClNo{
+    background-color:transparent;
+}
+.UIBgClA0{
+    background-color: #00000000;
+}
+.UIBgClW{
+    background-color: white;
+}
+.UIBgClB{
+    background-color: black;
+}
+.UIBgClc4ffcc59{
+    background-color: #c4ffcc59;
+}
+.UIBgCl201b038b{
+    background-color: #201b038b;
+}
+.UIBgCl6d6b62c1{
+    background-color: #6d6b62c1;
+}
+.UIBgCl464646c1{
+    background-color: #464646c1;
+}
+.UIBgCle6ad9dd2{
+    background-color: #e6ad9dd2;
+}
+.UIBgCl6b4940b0{
+    background-color: #6b4940b0;
+}
+.UIBgCl2014038b{
+    background-color: #2014038b;
+}
+.UIBgClaw{
+    background-color: #FBE9E7b0;
+}
+.UIBgClFFCDD28b{
+    background-color: #FFCDD28b;
+}
+.UItxClB{
+    color:rgb(0, 0, 0);
+}
+.UItxClR{
+    color:rgb(255, 0, 0);
+}
+.UItxClGr{
+    color:rgb(17, 255, 0);
+}
+.UIHeAu{
+    height:auto;
+}
+.UIHi100{
+    height:100%;
+}
+.UIHi090{
+    height:90%;
+}
+.UIHi080{
+    height:80%;
+}
+.UIHi070{
+    height:70%;
+}
+.UIHi060{
+    height:60%;
+}
+.UIHi050{
+    height:50%;
+}
+.UIHi040{
+    height:40%;
+}
+.UIHi030{
+    height:30%;
+}
+.UIHi020{
+    height:20%;
+}
+.UIHi010{
+    height:10%;
+}
+.UIMaHi100{
+    max-height:100%;
+}
+.UIMaHi090{
+    max-height:90%;
+}
+.UIMaHi080{
+    max-height:80%;
+}
+.UIMaHi070{
+    max-height:70%;
+}
+.UIMaHi060{
+    max-height:60%;
+}
+.UIMaHi050{
+    max-height:50%;
+}
+.UIMaHi040{
+    max-height:40%;
+}
+.UIMaHi030{
+    max-height:30%;
+}
+.UIMaHi020{
+    max-height:20%;
+}
+.UIMaHi010{
+    max-height:10%;
+}
+.UIMaHi005{
+    max-height:5%;
+}
+.UIWiAu{
+    width:auto;
+}
+.UIWi100{
+    width:100%;
+}
+.UIWi090{
+    width:90%;
+}
+.UIWi080{
+    width:80%;
+}
+.UIWi070{
+    width:70%;
+}
+.UIWi060{
+    width:60%;
+}
+.UIWi050{
+    width:50%;
+}
+.UIWi040{
+    width:40%;
+}
+.UIWi030{
+    width:30%;
+}
+.UIWi020{
+    width:20%;
+}
+.UIWi010{
+    width:10%;
+}
+.UIMaWi100{
+    max-width:100%;
+}
+.UIMaWi090{
+    max-width:90%;
+}
+.UIMaWi080{
+    max-width:80%;
+}
+.UIMaWi070{
+    max-width:70%;
+}
+.UIMaWi060{
+    max-width:60%;
+}
+.UIMaWi050{
+    max-width:50%;
+}
+.UIMaWi040{
+    max-width:40%;
+}
+.UIMaWi030{
+    max-width:30%;
+}
+.UIMaWi020{
+    max-width:20%;
+}
+.UIMaWi010{
+    max-width:10%;
+}
+.UIziPoPu{
+    z-index:5;
+}
+.UIziUIw{
+    z-index:3;
+}
+.UIHDeL{
+    z-index:2;
+}
+.UIApw{
+    z-index:1;
+}
+.UIBFB{
+    backdrop-filter: blur(0.2em);
+    -webkit-backdrop-filter: blur(0.2em);
+}
+.UIBRNo{
+    border:none;
+}
+.UIBR03{
+    border-radius: .3rem;
+}
+.UIBR05{
+    border-radius: .5rem;
+}
+.UIBS1{
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.327);
+}
+.UIBS05{
+    box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.327);
+}
+.UIBS03{
+    box-shadow: 0 0 0.3rem 0 rgba(0, 0, 0, 0.327);
+}
+.UIBS01{
+    box-shadow: 0 0 0.1rem 0 rgba(0, 0, 0, 0.327);
+}
+.UIPa001{
+    padding: 1%;
+}
+.UIPa002{
+    padding: 2%;
+}
+.UITrsBCl03{
+    transition: background-color 0.3s;
+}
+.UITrsBCl05{
+    transition: background-color 0.5s;
+}
+.UITrsBCl08{
+    transition: background-color 0.8s;
+}
+.UITrsBCl10{
+    transition: background-color 1s;
+}
+.UITrsBCl12{
+    transition: background-color 1.2s;
+}
+.UITrsBCl15{
+    transition: background-color 1.5s;
+}
+.UITrsBCl20{
+    transition: background-color 2s;
+}
+.UITrsBCl40{
+    transition: background-color 4s;
+}
+.UIBoRa05{
+    border-radius: 0.5em;
+}
+/* mainUI-window */
+.UImUIw{
+    min-height:300px;
+    margin:0 auto;
+    margin-bottom:1%;
+    color:rgb(243, 243, 221);
+    top:10%;
+    left:23%;
+}
+/* app-window */
+.UIAW{
+    padding: 2%;
+}
+/* mainmenuButton */
+.UImmBt{
+    min-height:40px;
+    margin:1%;
+    color:beige;
+    border:1px;
+    border-color: black;
+}
+.UImmBt:hover{
+    background-color: rgba(185, 185, 185, 0.179);
+    color:rgb(222, 222, 200);
+    border:3px;
+}
+.UImmBt:active{
+    background-color: rgba(80, 43, 43, 0.038);
+    color:rgb(178, 178, 159);
+    border:2px;
+}
+/* mainUIButton */
+.UImUIBt{
+    background-color: #87222255;
+    color:#393333;
+    margin:0.5%;
+}
+.UImUIBt:hover{
+    background-color: #a3313155;
+    color:#f5e5e5;    
+}
+.UImUIBt:active{
+    background-color: #a54d4d55;
+    color:#fff8f8;    
+}
+/* navbar */
+.UINvBr{
+    top:0;
+    left:10%;
+    background-color: rgba(255, 170, 159, 0.348);
+}
+.UINvBrBt{
+    color:#393333;
+    margin:0.5%;
+}
+.UINvBrBt:hover{
+    background-color: rgba(96, 44, 44, 0.179);
+    color:beige;
+    border:3px; 
+}
+.UINvBrBt:active{
+    background-color: rgba(183, 75, 75, 0.179);
+    color:rgb(255, 255, 255);
+    border:2px; 
+}
+/* log_window card */
+.UILgWC{
+    padding: 2%;
+}
+.UILgWC:hover{
+    background-color: #7c7a70c1;
+    color:rgb(255, 245, 245);
+}
+.UILgWC:active{
+    background-color: #858379c1;
+    color:rgb(255, 255, 255);
+}

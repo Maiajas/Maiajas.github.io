@@ -1,0 +1,101 @@
+/* font properties */
+.GLOWWn{
+    word-wrap:normal;
+}
+.GLOFF{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.CLFS1e{
+    font-size:1em;
+}
+.CLFS2e{
+    font-size:1em;
+}
+.CLFS3e{
+    font-size:3em;
+}
+.GLOTAC{
+    text-align: center;
+}
+/* global content */
+.GLOAIC{
+    align-items: center;
+}
+.GLODSB{
+	display: block;
+}
+.GLODSiB{
+    display:inline-block;
+}
+.GLOJCC{
+	justify-content: center;
+}
+.GLOUSN{
+    user-select:none;
+}
+.GLOOvH{
+    overflow: hidden;
+}
+.GLOOvXH{
+    overflow-x: hidden;
+}
+.GLOOvS{
+    overflow: scroll;
+}
+.GLOvYS{
+    overflow-y: scroll;
+}
+.GLOOvA{
+    overflow: auto;
+}
+.GLOPad0{
+    padding: 0;
+}
+.GLOMarA{
+    margin:auto;
+}
+.GLOMar000A{
+    margin:0 auto;
+}
+.GLOMar0005A{
+    margin:0.5% auto;
+}
+.GLOMar001A{
+    margin:1% auto;
+}
+.GLOMar006A{
+    margin:6% auto;
+}
+.GLOMar0{
+    margin:0;
+}
+.GLOMarT010{
+    margin-top:10%;
+}
+.GLOMarT001{
+    margin-top:1%;
+}
+.GLOMarT005{
+    margin-top:5%;
+}
+.GLOpR0{
+    float:right;
+}
+.GLOpL0{
+    float:left;
+}
+.GLOPoSta{
+    position:static;
+}
+.GLOPoAb{
+    position:absolute;
+}
+.GLOPoRe{
+    position:relative;
+}
+.GLOPoSti{
+    position:sticky;
+}
+.GLOPoFi{
+    position:fixed;
+}

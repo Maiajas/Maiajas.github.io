@@ -1,0 +1,43 @@
+{
+    "en-us":{
+        "start_button":"Start.",
+        "next_button":"Next.",
+        "stop_button":"Stop.",
+        "navbar_home_button":"Home",
+        "navbar_about_button":"About",
+        "refresh_button":"Refresh.",
+        "test_button":"Test.",
+        "home_title_text":"Home Page:",
+        "about_title_text":"About Page:",
+        "about_main_text":"Vulputate ut pharetra sit amet. Faucibus a pellentesque sit amet porttitor. Purus ut faucibus pulvinar elementum integer enim neque volutpat ac. Interdum velit laoreet id donec ultrices tincidunt. Ultrices sagittis orci a scelerisque purus semper eget duis. Sagittis aliquam malesuada bibendum arcu. Ultricies integer quis auctor elit sed vulputate mi sit. Magna ac placerat vestibulum lectus. Arcu non odio euismod lacinia at quis risus sed. Duis tristique sollicitudin nibh sit amet commodo nulla. Aliquam faucibus purus in massa tempor nec feugiat nisl pretium. Elementum integer enim neque volutpat ac tincidunt vitae semper quis. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Faucibus ornare suspendisse sed nisi lacus sed viverra. Et netus et malesuada fames ac turpis egestas sed. Malesuada fames ac turpis egestas maecenas. Vitae auctor eu augue ut lectus arcu bibendum.",
+        "log_button":"Show event log.",
+        "close_button":"Close.",
+        "home_main_text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "menu_button":"Menu.",
+        "navbar_menu_button":"Menu.",
+        "log_window_title_text":"Event Log:",
+        "log_window_close_top_button":"X",
+        "log_window_close_bottom_button":"Close.",
+        "log_window_clear_button":"Clear log.",
+        "popup_language_button":"Choose Language",
+        "applist_title_text":"App List:",
+        "navbar_applist_button":"App List.",
+        "navbar_search_button":"Search.",
+        "navbar_searchBar_close_button":"X",
+        "navbar_searchBar_search_button":"Search.",
+        "search_result_title_text":"Search results:",
+        "search_result_error":"found nothing..",
+        "error_generic_title_text":"Error Page.",
+        "error_generic_main_text":"generic error page, for testing.",
+        "navbar_test1_button":"test1",
+        "navbar_test2_button":"test2",
+        "navbar_test3_button":"test3",
+        "popup_debug_menu_button":"Debug Menu.",
+        "debug_menu_title_text":"Debug Menu:",
+        "debug_navigator_button":"get browser info",
+        "debug_location_button":"get location"
+    },
+    "nl":{
+        "example":"tekst."
+    }
+}
